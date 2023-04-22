@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="HOME/INDEX/Back/bootstrap.min.css">
+  <script src="HOME/INDEX/Back/jquery.min.js"></script>
+  <script src="HOME/INDEX/Back/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;}
+    }
+    @font-face {
+    font-family: 'IranianSansWeb';
+    src: url('Home/INDEX/font/IRANSans-web.eot'); /* IE9 Compat Modes */
+    src: url('Home/INDEX/font/IRANSans-web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('Home/INDEX/font/IRANSans-web.woff') format('woff'), /* Pretty Modern Browsers */
+    url('Home/INDEX/font/IRANSans-web.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'IranianSansBoldWeb';
+    src: url('Home/INDEX/font/IRANSans-Bold-web.eot'); /* IE9 Compat Modes */
+    src: url('Home/INDEX/font/IRANSans-Bold-web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('Home/INDEX/font/IRANSans-Bold-web.woff') format('woff'), /* Pretty Modern Browsers */
+    url('Home/INDEX/font/IRANSans-Bold-web.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'IranianSansMediumWeb';
+    src: url('Home/INDEX/font/IRANSans-Medium-web.eot'); /* IE9 Compat Modes */
+    src: url('Home/INDEX/font/IRANSans-Medium-web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('Home/INDEX/font/IRANSans-Medium-web.woff') format('woff'), /* Pretty Modern Browsers */
+    url('Home/INDEX/font/IRANSans-Medium-web.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'IranianSansLightWeb';
+    src: url('Home/INDEX/font/IRANSans-Light-web.eot'); /* IE9 Compat Modes */
+    src: url('Home/INDEX/font/IRANSans-Light-web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('Home/INDEX/font/IRANSans-Light-web.woff') format('woff'), /* Pretty Modern Browsers */
+    url('Home/INDEX/font/IRANSans-Light-web.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'IranianSansUltraLightWeb';
+    src: url('Home/INDEX/font/IRANSans-UltraLight-web.eot'); /* IE9 Compat Modes */
+    src: url('Home/INDEX/font/IRANSans-UltraLight-web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('Home/INDEX/font/IRANSans-UltraLight-web.woff') format('woff'), /* Pretty Modern Browsers */
+    url('Home/INDEX/font/IRANSans-UltraLight-web.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+body{
+  font-family: IranianSansWeb
+}
+#center,#center2{
+  text-align: center;
+}
+.well{
+  text-align: right;
+  color: #3e3e3es;
+  line-height: 2;
+}
+h4{
+  font-family: IranianSansBoldWeb;
+  color:#286090;
+}
+#posleft{
+  height: 100%;
+position: absolute;
+}
+#posright{
+  position: relative;
+  float: right;
+}
+#center p ,#center2 p{
+  margin-top: 10px;
+}
+#imglogo{
+  height: 100px;
+  width: auto;
+  text-align: center;
+}
+#ilogo{
+  height: 40px;
+width: auto;
+margin-top: -10px;
+}
+h2{
+  text-align: center;
+}
+#aboutNew{
+  position: fixed;
+z-index: 99;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background-color: rgba(0,0,0,.5);
+}
+#contactNew{
+  position: fixed;
+z-index: 99;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background-color: rgba(0,0,0,.5);
+}
+#boxabout{
+  height: 600px;
+  width: 600px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 auto;
+  top: 5%;
+}
+#close{
+  font-weight: 500;
+position: absolute;
+top: -30px;
+right: 0;
+color: #eee;
+border: none;
+background: none;
+}
+#boxenew{
+  margin-top: 20px;
+}
+#help{
+  text-align: right;
+  font-family: IranianSansUltraLightWeb
+}
+#formContact{
+  margin-top: 150px;
+}
+textarea{
+  width: 507px;
+}
+#sendeEmail{
+ margin-top: 50px;
+}
+#textleft{
+  text-align: left;
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="Home/INDEX/file/LOGO/logo0000.png" id="ilogo"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Document</a></li>
+        <li><a href="javascript:void(0)" id="about1">About</a></li>
+        <li><a href="javascript:void(0)" id="content1">Content</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs" id="posleft">
+      <h2><img src="Home/INDEX/file/LOGO/logo0000.png" id="imglogo"></h2>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Documnet</a></li>
+        <li><a href="javascript:void(0)" id="about">About</a></li>
+        <li><a href="javascript:void(0)" id="content">Content</a></li>
+      </ul><br>
+      <br>
+      <br>
+      <br
+      <br>
+      <center>
+        <a href="http://www.bojnord-city.ir/" target="_blank"><img src="HOME/INDEX/file/WORK/shahrdari.png" /></a>
+        <a href="http://mahyapardaz.com/" target="_blank"><img src="HOME/INDEX/file/WORK/mahya pardaz.png" /></a>
+        <a href="http://www.esfarayen.ac.ir/" target="_blank"><img src="HOME/INDEX/file/WORK/esf uni logo copy.png" /></a>
+  </center>
+      <br>
+
+      <center>
+        <a href="mailto:mkarimi2133@gmail.com" target="_blank"><img src="HOME/INDEX/file/LOGO/gmail.png" /></a>
+        <a href="mailto:mkarimi21@hotmail.com" target="_blank"><img src="HOME/INDEX/file/LOGO/outlook .png" /></a>
+        <a href="https://www.linkedin.com/in/mkarimi21/" target="_blank"><img src="HOME/INDEX/file/LOGO/linkedin.png" /></a>
+        <a href="https://plus.google.com/112408463994818284140" target="_blank"><img src="HOME/INDEX/file/LOGO/google-plus .png" /></a><br />
+        <a href="https://twitter.com/MKarimi21" target="_blank"><img src="HOME/INDEX/file/LOGO/twitter .png" style="margin-top:5px"/></a>
+        <a href="https://www.facebook.com/mkarimi21" target="_blank"><img src="HOME/INDEX/file/LOGO/facebook.png" style="margin-top:5px"/></a>
+        <a href="https://github.com/MKarimi21" target="_blank"><img src="HOME/INDEX/file/LOGO/github.png" style="margin-top:5px"/></a>
+        <a href="https://www.youtube.com/channel/UCpVgQSEvrK-HWU6osjqhFCA?view_as=subscriber" target="_blank"><img src="HOME/INDEX/file/LOGO/youtube .png" style="margin-top:5px"/></a><br />
+        <a href="https://www.instagram.com/mkarimi21/" target="_blank"><img src="HOME/INDEX/file/LOGO/instagram .png" style="margin-top:5px"/></a>
+        <a href="https://telegram.me/mkarimi21" target="_blank"><img src="HOME/INDEX/file/LOGO/telegram.png"style="margin-top:5px" /></a>
+        <a href="tel:00989159830611" target="_blank"><img src="HOME/INDEX/file/LOGO/whatsapp .png" style="margin-top:5px"/></a>
+        <a href="http://chart.apis.google.com/chart?cht=qr&chs=300x300&chl=www.Mr-Karimi.ir%0AMkarimi21%40hotmail.com%0AMkarimi2133%40gmail.com%0ALinkedin.com%2Fin%2Fmkarimi21%0Aplus.google.com%2F112408463994818284140%0ATwitter.com%2FMkarimi21%0AFacebook.com%2FMkarimi21%0AGitHub.com%2FMkarimi21%0ASkype.com%2FMkarimi21%0ATelegram.me%2FMkarimi21%0AInstagram.com%2FMkarimi21%0A00989159830611&choe=UTF-8&chld=L" target="_blank"><img src="HOME/INDEX/file/LOGO/qr-code .png" style="margin-top:5px"/></a>
+</center>
+    </div>
+    <br>
+
+    <div class="col-sm-9" id="posright">
+      <div class="well">
+        <h4>
+      MS Project  برنامه ریزی و زمان بندی برداشت ممیزی املاک با نرم افزار
+          <br>
+          <br>
+          (مطالعه موردی: شهرداری بجنورد)
+
+        </h4>
+         <br>
+<p>
+  امروزه سازمان و یا سیستمی که بخواهد با در نظر گرفتن زمان های کاری، تعطیلات و تمامی حالات را مدیریت، برنامه ریزی و منسجم نماید، بسیار مشکل است. شرکت محیا پرداز با ثبت ممیزی 10 هزار ملک اعم از آپارتمان، صنف و... شهر بجنورد نیازمند مدیریت و برنامه ریزی زمانی است. یکی از نرم افزارهایی که می تواند این امر را با در نظر گرفتن زمان های کاری، تعطیلات رسمی تقویم ملی و هم چنین با اعمال تخصیص روزانه انجام دهد، نرم افزار ام اس پروجکت می باشد. این نرم افزار توسط شرکت مایکروسافت ارائه و به منظور مدیریت و برنامه ریزی های پروژه های کلان و خرد می باشد. ما نیز برای مدیریت و برنامه ریزی شرکت محیا پرداز با استفاده از این نرم افزار برنامه ریزی زمانی انجام داده ایم و زمان صرف شده در ثبت املاک شهر بجنورد با توجه به ترتیب ثبت در پایگاه داده و مستقل بودن هرمرحله از یک دیگر اعمال کرده ایم
+
+</p>
+      </div>
+      <div class="well" id="center">
+        <p>
+          <a href="HOME/MAIN/شرکت محیا پرداز.docx" target="_blank"><button type="button" class="btn btn-primary">Docx format</button></a>
+          <a href="HOME/MAIN/شرکت محیا پرداز.pdf" target="_blank"><button type="button" class="btn btn-primary">PDF format</button></a>
+          <a href="HOME/MAIN/شرکت محیا پرداز - فعالیت شرکت به همراه تخصیص به صورت روزانه.mpp" target="_blank"><button type="button" class="btn btn-primary">MSP format</button></a>
+          <a href="HOME/MAIN/شرکت محیا پرداز - فعالیت شرکت به همراه تخصیص به صورت روزانه.pdf" target="_blank"><button type="button" class="btn btn-primary">MSP PDF format</button></a>
+
+<button type="button" class="btn btn-warning" id="helpBtn">راهنما</button>
+<p id="help">
+<br>
+راهنمای دانلود فایل ها
+<br>
+نیازمند پشتیبانی نرم افزاری از فایل ها است از قبیل
+<br>
+MS Project
+<br>
+MS Word
+<br>
+Adobe Reader
+</p>
+    </p>
+      </div>
+      <div class="well" id="center2">
+        <p>©2018 <a href="http://www.mr-karimi.ir/" target="_blank">M. Karimi</a> All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="aboutNew">
+<div class="well" id="boxabout">
+  <button class="btn btn-info" type="button" id="aboutClose">
+                    <i class="c-icon c-icon--close js-contactClose"></i>
+                    بستن
+                </button>
+<p id="boxenew">
+  سلام! من مصطفی کریمی هستم، کارشناس مهندسی صنایع، علاقه مند به زمینه های هوش مصنوعی، مدیریت و کنترل پروژه و مهندسی مالی هستم، ضمنا مسلط به نرم افزار های تخصصی صنایع، می باشم. شما می توانید رزومه مرا در وب شخصی خودم مشاهده کنید
+<br>
+سپاس گذارم
+<br>
+<br>
+<br>
+<p id="textleft">
+Hello! I am Mustafa Karimi, an industrial engineering specialist, interested in artificial intelligence, project management and project management, and financial engineering, while I am in charge of industry-specific software. You can view my resume on my own web site.
+<br>
+Thank you so much
+</p>
+<br>
+
+
+<div class="well" id="center2">
+      <a href="http://mr-karimi.ir/" target="_blank">www.Mr-Karimi.ir</a>
+</div>
+</p>
+</div>
+</div>
+<div id="contactNew">
+<div class="well" id="boxabout">
+  <button class="btn btn-info" type="button" id="contentClose">
+                    <i class="c-icon c-icon--close js-contactClose"></i>
+                    بستن
+                </button>
+<p id="boxenew">
+  <form action="" method="post" id="formContact">
+                                  <div class="u-clearFix">
+                                      <div class="col-md-6 col-sm-12 u-textRight u-mB20">
+                                          <div class="o-form o-form--validation2">
+                                              <label for="senderEmail">
+                                                  آدرس ایمیل شما
+                                              </label>
+                                              <input id="senderEmail" class="ltr u-ltr u-rtlPlaceHolder" placeholder="مثلا: example@hotmail.com" type="email">
+                                              <div class="o-form__itemHint" style="display: none;"></div>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6 col-sm-12 u-textRight u-mB20">
+                                          <div class="o-form o-form--validation2">
+                                              <label for="senderName">
+                                                  نام شما
+                                              </label>
+                                              <input id="senderName" placeholder="مثلا: مصطفی کریمی" type="text">
+                                              <div class="o-form__itemHint" style="display: none;"></div>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-12 col-sm-12 u-textRight u-mB20">
+                                          <label for="senderDescription">
+                                              توضیحات
+                                          </label>
+                                          <textarea id="senderDescription" placeholder="توضیحات تکمیلی خود را در این قسمت بنویسید..." name="name" rows="3" cols="80"></textarea>
+                                      </div>
+                                      <div class="col-md-12 col-sm-12 u-textLeft">
+                                          <button type="submit" class="btn btn-warning" id="sendemail">
+                                              ارسال
+                                          </button>
+                                      </div>
+                                  </div>
+                              </form>
+</p>
+</div>
+</div>
+</body>
+<script>
+$(document).ready(function () {
+  $("#aboutNew").hide();
+  $("#contactNew").hide();
+    $("#help").hide();
+  $("#about,#about1").click(function () {
+    $("#aboutNew").slideDown();
+
+  })
+  $("#aboutClose").click(function () {
+    $("#aboutNew").slideUp()
+  })
+  $("#content,#content1").click(function () {
+    $("#contactNew").slideDown();
+
+  })
+  $("#contentClose").click(function () {
+    $("#contactNew").slideUp()
+  })
+  $("#helpBtn").click(function () {
+    $("#help").slideToggle()
+  })
+})
+</script>
+</html>
